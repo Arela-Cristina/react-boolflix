@@ -1,4 +1,5 @@
 import './App.css'
+import Index from './pages'
 
 function App() {
 
@@ -6,8 +7,7 @@ function App() {
   return (
     <>
 
-      <input type="search" />
-      <button>Cerca</button>
+      <Index />
 
     </>
   )
