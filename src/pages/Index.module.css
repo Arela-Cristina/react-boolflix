@@ -1,0 +1,10 @@
+.cardContainer {
+    /* debug */
+    background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: 1rem;
+}
