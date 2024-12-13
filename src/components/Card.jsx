@@ -9,8 +9,8 @@ export default function Card({ item }) {
 
     return (
 
-        <figure>
-            <div>
+        <figure className={style.figure}>
+            <div className={style.image_figure}>
                 {/* {(poster_path) ?
                     <img className={style.image} src={poster_path} alt="" /> :*/}
                 <img className={style.image} src={imgVuota} alt="" />
