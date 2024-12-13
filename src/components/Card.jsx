@@ -1,5 +1,6 @@
 import imgVuota from '../../src/place-holder-img.png'
 import languages from '../language'
+import Stars from './Vote'
 import style from "./Card.module.css"
 
 export default function Card({ item }) {
@@ -12,8 +13,8 @@ export default function Card({ item }) {
 
         <figure className={style.figure}>
             <div className={style.image_figure}>
-                <img className={style.image} 
-                src={poster_path ? `https://image.tmdb.org/t/p/original${poster_path}` : imgVuota} alt="" />
+                <img className={style.image}
+                    src={poster_path ? `https://image.tmdb.org/t/p/original${poster_path}` : imgVuota} alt="" />
             </div>
             <div className={style.body_figure}>
                 <div>Titolo: {title}</div>
@@ -25,6 +26,7 @@ export default function Card({ item }) {
                 }
 
                 <div>Voti: {vote_average} </div>
+                <Stars vote={vote_average} />
             </div>
         </figure>
 

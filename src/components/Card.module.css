@@ -1,6 +1,6 @@
 .figure {
     /* debug */
-    background-color: yellow;
+    background-color: rgb(241, 140, 199);
     width: 15rem;
     height: 100%;
     display: flex;
