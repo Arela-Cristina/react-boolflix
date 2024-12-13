@@ -12,7 +12,8 @@ export default function Card({ item }) {
 
         <figure className={style.figure}>
             <div className={style.image_figure}>
-                <img className={style.image} src={imgVuota} alt="" />
+                <img className={style.image} 
+                src={poster_path ? `https://image.tmdb.org/t/p/original${poster_path}` : imgVuota} alt="" />
             </div>
             <div className={style.body_figure}>
                 <div>Titolo: {title}</div>
