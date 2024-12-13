@@ -12,23 +12,36 @@ export default function Card({ item }) {
     return (
 
         <figure className={style.figure}>
-            <div className={style.image_figure}>
-                <img className={style.image}
-                    src={poster_path ? `https://image.tmdb.org/t/p/original${poster_path}` : imgVuota} alt="" />
-            </div>
-            <div className={style.body_figure}>
-                <div>Titolo: {title}</div>
-                <div>Titolo Originale: {original_title}</div>
-                {
-                    languages[original_language] ?
-                        <img src={languages[original_language]} height={20} alt="" /> :
-                        <p>{original_language}</p>
-                }
+            <div className={style.card}>
+                {/* Container FlipCard Effect*/}
+                <div className={style.cardInner}>
+                    {/* copertina della card */}
+                    <div className={style.cardFront}>
+                        <img className={style.image}
+                            src={poster_path ? `https://image.tmdb.org/t/p/original${poster_path}` : imgVuota} alt="" />
+                    </div>
 
-                <div>Voti: {vote_average} </div>
-                <Stars vote={vote_average} />
+                    {/* dietro della copertina della card */}
+                    <div className={style.cardBack}>
+                        <div className={style.body_figure}>
+                            <div>Titolo: {title}</div>
+                            <div>Titolo Originale: {original_title}</div>
+                            {
+                                languages[original_language] ?
+                                    <img src={languages[original_language]} height={20} alt="" /> :
+                                    <p>{original_language}</p>
+                            }
+
+                            <div>Voti: {vote_average} </div>
+                            <Stars vote={vote_average} />
+                        </div>
+                    </div>
+                </div>
             </div>
         </figure>
-
     )
 }
+
+
+
+
