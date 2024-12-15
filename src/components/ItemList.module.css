@@ -1,10 +1,28 @@
+.main_container {
+    background-color: #000000;
+    color: white;
+}
+
+.ul_container {
+    display: flex;
+    width: 93%;
+    margin: 0 auto;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
+    margin-left: 10px;
 }
 
-.list{
+.title {
+    margin-left: 4.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.list {
     list-style: none;
 }

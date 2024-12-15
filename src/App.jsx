@@ -1,8 +1,8 @@
 import './App.css'
 import GlobalContext from './context/GlobalContext'
 import axios from 'axios'
-import { useState } from 'react'
-import {BASE_URI} from "../src/config"
+import { useState, useEffect } from 'react'
+import { BASE_URI } from "../src/config"
 import { API_KEY } from './key'
 import Header from './components/Header'
 import Index from './pages'
@@ -40,10 +40,9 @@ function App() {
       })
   }
 
-  // useEffect(() => {
-  //   fetchData()
-  // }, [])
-  // // aggiornamento dipende di  ogni rendering della query
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
 

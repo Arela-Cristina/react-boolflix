@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import GlobalContext from "../context/GlobalContext"
+import style from "./Search.module.css"
 
 export default function Search() {
 
@@ -18,13 +19,14 @@ export default function Search() {
 
     return (
 
-        <section>
+        <section className={style.container_search}>
             <input
+            className={style.input}
                 type="search"
                 value={query}
                 onChange={handleChange}
                 placeholder="Cerca un film" />
-            <button onClick={handleSearch}>Cerca</button>
+            <button class={style.button} onClick={handleSearch}>Cerca</button>
         </section>
     )
 }

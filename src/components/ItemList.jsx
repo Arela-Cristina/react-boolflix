@@ -5,11 +5,11 @@ export default function ItemList({ items = [], title }) {
     console.log(`Rendering of: ${title}`, items)
     return (
 
-        <section>
+        <section className={style.main_container}>
             <div>
-                <h2>{title}</h2>
+                <h2 className={style.title}>{title}</h2>
             </div>
-            <div>
+            <div className={style.ul_container}>
                 <ul className={style.container}>
                     {items.map((item) => (
                         <li className={style.list} key={item.id}>
