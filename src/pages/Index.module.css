@@ -1,6 +1,4 @@
 .cardContainer {
-    /* debug */
-    background-color: pink;
     display: flex;
     flex-wrap: wrap;
     width: 80%;
