@@ -3,7 +3,7 @@ import { FaStar, FaRegStar } from 'react-icons/fa'
 export default function Stars({ vote }) {
 
     console.log('vote', vote)
-    const votes = parseFloat(vote) / 2;
+    const votes = Math.ceil(vote) / 2;
     const fullStars = Math.floor(votes);
     const emptyStars = 5 - fullStars
 
